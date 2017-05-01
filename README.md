@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Overview
 
 This is the repository for the lecture Webengineering in the summer semester 2017 at the University of Kassel.
@@ -12,3 +13,6 @@ This is the repository for the lecture Webengineering in the summer semester 201
 
 * 2017-04-24 [slides](https://github.com/micromata/webengineering-2017/blob/master/slides/2017-04-24-webengineering.pdf) [video](https://www.youtube.com/watch?v=FmkrTbNu9yc)
 
+=======
+# webengineering2017
+>>>>>>> branch 'master' of https://github.com/CSchaub/webengineering2017
