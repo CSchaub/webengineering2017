@@ -19,7 +19,7 @@ public class PostService {
      */
     public List<String> getPosts() {
         return posts;
-    }
+    } 
 
 
     /**

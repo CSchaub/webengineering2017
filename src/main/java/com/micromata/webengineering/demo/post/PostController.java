@@ -18,7 +18,7 @@ public class PostController {
     @RequestMapping("/post")
     public List<String> getPostList() {
         return postService.getPosts();
-    }
+    } 
 
     @RequestMapping(value = "/post/add")
     public void addPost(@RequestParam("title") String title) {
