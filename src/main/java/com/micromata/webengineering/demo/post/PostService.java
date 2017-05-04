@@ -36,7 +36,7 @@ public class PostService {
     	tmp.setTitle(title);
     	tmp.setTimeOfCreation(new Date().toString());
     	tmp.setContent("dummycontent");
-        posts.add(postCounter, tmp);
+        posts.add(tmp);
         postCounter++;
     }
 
@@ -45,6 +45,13 @@ public class PostService {
      * @param id
      */
 	public void delPost(int id) {
-		posts.remove(id);
+		if (posts.size() >= id) {
+			for (PostPOJO post : posts) {
+				if (post.getId() == id) {
+					posts.remove(post);
+					break;
+				}
+			}
+		} 
 	}
 }
