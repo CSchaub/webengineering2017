@@ -25,6 +25,11 @@ public class PostController {
     public void addPost(@RequestParam("title") String title) {
         postService.addPost(title);
     }
+    
+    @RequestMapping(value = "/post/del", method=RequestMethod.POST)
+    public void delPost(@RequestParam("id") int id) {
+        postService.delPost(id);
+    }
 
 	public PostService getPostService() {
 		return postService;

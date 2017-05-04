@@ -1,14 +1,23 @@
 package com.micromata.webengineering.demo.post;
 
-import java.util.Date;
+/**
+ * POJO data structure to save posts
+ * 
+ * @author chris
+ *
+ */
 
 public class PostPOJO {
+	
+	private int id;
 	
 	private String title;
 	private String content;
 	private String timeOfCreation;
 	
-	
+	public PostPOJO (int id) {
+		this.setId(id);
+	}
 	
 	public String getTitle() {
 		return title;
@@ -27,5 +36,13 @@ public class PostPOJO {
 	}
 	public void setTimeOfCreation(String timeOfCreation) {
 		this.timeOfCreation = timeOfCreation;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }

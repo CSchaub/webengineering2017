@@ -11,7 +11,9 @@ import java.util.List;
  */
 @Service
 public class PostService {
+	
     private List<PostPOJO> posts = new LinkedList<>();
+    private int postCounter = 0;
     
 
     /**
@@ -30,11 +32,19 @@ public class PostService {
      * @param title the post title.
      */
     public void addPost(String title) {
-       	PostPOJO tmp = new PostPOJO();
+       	PostPOJO tmp = new PostPOJO(postCounter);
     	tmp.setTitle(title);
     	tmp.setTimeOfCreation(new Date().toString());
     	tmp.setContent("dummycontent");
-    	//tmp.setTimeOfCreation(new Date(2017,5,1,21,7));
-        posts.add(tmp);
+        posts.add(postCounter, tmp);
+        postCounter++;
     }
+
+    /**
+     * Del a post form the postList by id
+     * @param id
+     */
+	public void delPost(int id) {
+		posts.remove(id);
+	}
 }
